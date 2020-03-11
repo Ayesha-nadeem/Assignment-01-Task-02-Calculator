@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradiant"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context="pk.edu.pucit.calculator.MainActivity">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="right|bottom"
-        android:text="1200*20*60"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="9pt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="5,760,000"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="18pt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,42 +57,50 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_ac"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="AC"
+                android:onClick="onAC"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_div"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="/"
+                android:onClick="action"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_mul"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="X"
+                android:text="x"
+                android:onClick="action"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_sub"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="-"
+                android:onClick="action"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
@@ -106,41 +114,49 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_seven"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="7"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_eight"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="8"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_nine"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="9"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
             <TextView
+                android:id="@+id/tv_add"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="+"
+                android:onClick="action"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
@@ -153,42 +169,50 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_four"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="4"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_five"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="5"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_six"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="6"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_mod"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="%"
+                android:onClick="action"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
@@ -201,41 +225,49 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_one"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_two"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_three"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="3"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
             <TextView
+                android:id="@+id/tv_del"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="del"
+                android:onClick="ondel"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
@@ -249,6 +281,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_00"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -259,32 +292,38 @@
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_zero"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
+                android:onClick="getequation"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_decimal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="."
+                android:onClick="addDecimal"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
             <TextView
+                android:id="@+id/tv_equal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="="
+                android:onClick="onEqual"
                 android:textColor="@color/white"
                 android:textSize="10pt" />
 
